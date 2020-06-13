@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title>お問い合わせ結果</title>
+</head>
+<body>
+<p th:object="${inquiryForm}">
+    お名前：<span th:text="*{name}">おなまえ</span><br>
+    メールアドレス：<span th:text="*{email}">めーるあどれす</span><br>
+    年齢：<span th:text="*{age}">ねんれい</span><br>
+    性別：<span th:text="*{gender}">せいべつ</span><br>
+</p>
+</body>
+</html>

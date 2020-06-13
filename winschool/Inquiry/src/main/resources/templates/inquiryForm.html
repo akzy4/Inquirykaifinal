@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title>お問い合わせフォーム</title>
+</head>
+<body>
+<form th:object="${inquiryForm}" action="inquiryResult" method="post">
+<div>
+    お名前：<br>
+    <input type="text" th:field="*{name}">
+    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}">
+        名前入力エラー
+    </span>
+</div>
+<div>
+    メールアドレス：<br>
+    <input type="text" th:field="*{email}">
+    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}">
+        メールアドレス入力エラー 
+    </span>
+</div>
+<div>
+    年齢：<br>
+    <input type="text" th:field="*{age}">
+    <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}">
+        年齢入力エラー 
+    </span>
+</div>
+<div>
+    性別：<br>
+    <input type="radio" th:field="*{gender}" value="男性">男性
+    <input type="radio" th:field="*{gender}" value="女性">女性
+</div>
+<div>
+    <input type="submit">
+</div>
+</form>
+</body>
+</html>
