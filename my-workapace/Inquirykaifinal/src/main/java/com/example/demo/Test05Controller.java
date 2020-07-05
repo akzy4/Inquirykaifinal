@@ -68,7 +68,7 @@ public class Test05Controller {
 		return "inquiry";
 	}
 
-	@GetMapping("/form")
+	@GetMapping("/form")   
 	public String form(Inquiry inquiry) {
 		return "form";
 	}
